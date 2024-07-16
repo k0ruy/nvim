@@ -1,4 +1,5 @@
 local plugins = {
+
   {
     "danymat/neogen",
     -- Uncomment next line if you want to follow only stable versions
@@ -27,6 +28,7 @@ local plugins = {
         "jedi-language-server",
         "pyright",
         "black",
+        "ruff-lsp",
       }
     }
   },

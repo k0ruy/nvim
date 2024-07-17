@@ -39,7 +39,6 @@ lspconfig.pylsp.setup({
 
   settings = {
     configurationSources = { "flake8" },
-    formatCommand = { "black" },
     pylsp = {
       plugins = {
         -- jedi_completion = {fuzzy = true},

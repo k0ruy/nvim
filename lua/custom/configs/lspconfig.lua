@@ -13,10 +13,17 @@ lspconfig.wgsl_analyzer.setup({
 lspconfig.pyright.setup({
   on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = { "python" },
+  filetypes = {"python"},
   settings = {
+<<<<<<< HEAD
     python = {
       pythonPath = "/home/ko4/miniforge3/envs/fplier/bin/python"
     }
   }
+=======
+     python = {
+       pythonPath = "/home/ko4/miniforge3/envs/fplier/bin/python",
+     },
+   },
+>>>>>>> aa0ea6811909d55237eb0d05e214fe2bd667902d
 })

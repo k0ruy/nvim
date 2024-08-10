@@ -31,7 +31,7 @@ M.generate_docstring = {
 
 M.run = {
     n = {
-        ["<leader>r"] = {
+        ["<leader>rr"] = {
             function ()
                 require('rust-tools').runnables.runnables();
             end,

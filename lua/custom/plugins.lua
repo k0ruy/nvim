@@ -26,6 +26,7 @@ local plugins = {
         "rust-analyzer",
         "wgsl-analyzer",
         "jedi-language-server",
+        "python-lsp-server",
         "pyright",
         "black",
         "ruff-lsp",

@@ -10,14 +10,14 @@ lspconfig.wgsl_analyzer.setup({
   capabilities = capabilities,
 })
 
-lspconfig.jedi_language_server.setup({
+lspconfig.pyright.setup({
   on_attach = on_attach,
   capabilities = capabilities,
---  cmd = { "pyright-langserver", "--stdio" },
---  filetypes = {"python"},
---  settings = {
---    python = {
---      pythonPath = "/home/ko4/miniforge3/envs/proj/bin/python"
---    }
---  }
+  cmd = { "pyright-langserver", "--stdio" },
+  filetypes = {"python"},
+  settings = {
+    python = {
+      pythonPath = "/home/ko4/miniforge3/envs/proj/bin/python"
+    }
+  }
 })

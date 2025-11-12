@@ -26,7 +26,6 @@ M.generate_docstring = {
           "Generate docstring for python functions"
         }
     }
-
 }
 
 M.run = {
@@ -51,5 +50,34 @@ M.crates = {
     }
 }
 
+-- Add Zig commands here
+M.zig = {
+    n = {
+        ["<leader>zr"] = {
+            function()
+                vim.cmd("terminal zig run " .. vim.fn.expand("%"))
+            end,
+            "Run current Zig file"
+        },
+        ["<leader>zb"] = {
+            function()
+                vim.cmd("terminal zig build")
+            end,
+            "Build Zig project"
+        },
+        ["<leader>zt"] = {
+            function()
+                vim.cmd("terminal zig test " .. vim.fn.expand("%"))
+            end,
+            "Test current Zig file"
+        },
+        ["<leader>zc"] = {
+            function()
+                vim.cmd("terminal zig build-exe " .. vim.fn.expand("%"))
+            end,
+            "Compile current Zig file"
+        }
+    }
+}
 
 return M

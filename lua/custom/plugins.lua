@@ -23,13 +23,14 @@ local plugins = {
     opts = {
       ensure_installed = {
         "lua-language-server",
-        "rust-analyzer",
-        "wgsl-analyzer",
+--        "rust-analyzer",
+--        "wgsl-analyzer",
         "jedi-language-server",
         "python-lsp-server",
         "pyright",
         "black",
-        "ruff-lsp",
+--        "ruff-lsp",
+        "zls",
       }
     }
   },

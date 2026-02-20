@@ -1,17 +1,14 @@
 local base = require("plugins.configs.lspconfig")
-local util = require('lspconfig.util')
 
 local on_attach = base.on_attach
 local capabilities = base.capabilities
 
-local lspconfig = require("lspconfig")
-
-lspconfig.wgsl_analyzer.setup({
+vim.lsp.config("wgsl_analyzer", {
   on_attach = on_attach,
   capabilities = capabilities,
 })
 
-lspconfig.pyright.setup({
+vim.lsp.config("pyright", {
   on_attach = on_attach,
   capabilities = capabilities,
   cmd = { "pyright-langserver", "--stdio" },
@@ -23,10 +20,5 @@ lspconfig.pyright.setup({
   }
 })
 
-lspconfig.zls.setup({
-  on_attach = on_attach,
-  capabilities = capabilities,
-  cmd = {"zls"},
-  filetypes = { "zig", "zon" },
-  root_dir = util.root_pattern("zls.json", "build.zig", ".git")
-})
+vim.lsp.enable("wgsl_analyzer")
+vim.lsp.enable("pyright")

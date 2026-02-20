@@ -23,14 +23,13 @@ local plugins = {
     opts = {
       ensure_installed = {
         "lua-language-server",
---        "rust-analyzer",
---        "wgsl-analyzer",
+        "rust-analyzer",
+        "wgsl-analyzer",
         "jedi-language-server",
         "python-lsp-server",
         "pyright",
         "black",
---        "ruff-lsp",
-        "zls",
+        "ruff",
       }
     }
   },
@@ -73,14 +72,14 @@ local plugins = {
         crates.show()
     end,
   },
-  {
-    "hrsh7th/nvim-cmp",
-    opts = function()
-        local M = require "plugins.configs.cmp"
-        table.insert(M.sources, {name = "crates"})
-        return M
-    end,
-  },
+  -- {
+  --   "hrsh7th/nvim-cmp",
+  --   opts = function()
+  --       local M = require "plugins.configs.cmp"
+  --       table.insert(M.sources, {name = "crates"})
+  --       return M
+  --   end,
+  -- },
   {
     "nvim-telescope/telescope.nvim",
     opts = function()
